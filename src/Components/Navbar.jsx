@@ -1,11 +1,12 @@
 import React from 'react'
+import Search from '../pages/Search'
 
 export default function Navbar() {
     return (
-        <div>
+        <>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <a style={{color:"#0d253f"}} className="navbar-brand" href="#">
               Themoviesdb
             </a>
             <button
@@ -20,26 +21,10 @@ export default function Navbar() {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                  Inicio
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Servicios
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Contacto
-                  </a>
-                </li>
-              </ul>
+            <Search/>
             </div>
           </div>
         </nav>
-      </div>
+      </>
     )
 }

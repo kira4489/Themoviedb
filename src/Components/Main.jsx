@@ -4,6 +4,14 @@ import Navbar from "./Navbar";
 import Pagination from "./Pagination";
 
 export default function Main() {
+  const next = () =>{
+
+  }
+
+  const prev = () =>{
+    
+  }
+
   const history = useHistory();
 
   const [data, setResults] = React.useState([]);
@@ -26,23 +34,31 @@ export default function Main() {
       <div className="container">
         <h1 className="title">The movies db</h1>
         <div className="row text-center">
-        {data.length > 0 &&
-              data.map((item) => (
-                <div className="col-4 col-md-3 mb-4 d-flex">
-                  <div className="card">
-                    <img class="card-img-top" src={`https://image.tmdb.org/t/p/w185${item.poster_path}`}/>
-                    <div className="card-body">
-                      <h4 className="card-title">{item.original_title}</h4>
-                    </div>
-                    <button id="boton" className="btn btn-success" onClick={() => history.push(`/detail/${item.id}`)}>
-                      Informacion
-                    </button>
+          {data.length > 0 &&
+            data.map((item) => (
+              <div className="col-4 col-md-3 mb-5 d-flex">
+                <div className="card">
+                  <img
+                    class="card-img-top"
+                    src={`https://image.tmdb.org/t/p/w185${item.poster_path}`}
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">{item.original_title}</h4>
+                    <strong>{item.vote_average}</strong>
                   </div>
+                  <button
+                    id="boton"
+                    className="btn btn-success"
+                    onClick={() => history.push(`/detail/${item.id}`)}
+                  >
+                    Informacion
+                  </button>
                 </div>
-           ))}
+              </div>
+            ))}
+        </div>
       </div>
-      </div>
-      <Pagination/>
+      <Pagination next={next} prev={prev}/>
     </div>
   );
 }

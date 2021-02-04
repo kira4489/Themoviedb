@@ -68,6 +68,10 @@
     margin-top: -2px;
 }
 
+.navbar-brand{
+  color: #0d253f;
+}
+
 #redes{
     margin-left: 10px;
 }
