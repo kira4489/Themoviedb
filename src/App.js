@@ -9,21 +9,20 @@ import {
 } from "react-router-dom";
 // import logo from './logo.svg';
 import './App.css';
-import Cards from './pages/Cards';
+import Details from './pages/Details';
 
 function App() {
   return (
-    <div className="App">
+    <>
        <Router>
         <Switch>
-          <Route exact path="/card/:id" component={Cards} />
+          <Route exact path="/detail/:id" component={Details} />
           <Route exact path="/">
             <Home  />
           </Route>
           </Switch>
       </Router>
-      {/* <Home/> */}
-    </div>
+    </>
   );
 }
 
