@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import ResultCard from "./ResultCard";
 import Navbar from "./Navbar";
+import Pagination from "./Pagination";
 
 export default function Main() {
   const history = useHistory();
@@ -42,6 +42,7 @@ export default function Main() {
            ))}
       </div>
       </div>
+      <Pagination/>
     </div>
   );
 }
