@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Navbar from "./Navbar";
+import "../css/Main.css"
 import Pagination from "./Pagination";
 
 export default function Main() {
@@ -21,9 +22,8 @@ export default function Main() {
   }, []);
 
   const obtenerDatos = async () => {
-    const data = await fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=ae97605229cea5a5f8ab7cc59dd73bc1"
-    );
+    const api_key = 'ae97605229cea5a5f8ab7cc59dd73bc1'
+    const data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}`);
     const users = await data.json();
     setResults(users.results);
     console.log(users.results);

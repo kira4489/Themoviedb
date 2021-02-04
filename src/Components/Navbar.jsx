@@ -4,10 +4,11 @@ import Search from '../pages/Search'
 export default function Navbar() {
     return (
         <>
+        <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div className="container">
-            <a style={{color:"#0d253f"}} className="navbar-brand" href="#">
-              Themoviesdb
+            <a className="navbar-brand" href="#">
+              The moviesDb
             </a>
             <button
               className="navbar-toggler"
@@ -21,10 +22,11 @@ export default function Navbar() {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
-            <Search/>
+                  <Search/>
             </div>
           </div>
         </nav>
+      </div>
       </>
     )
 }

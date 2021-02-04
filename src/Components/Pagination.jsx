@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-function Pagination({next,prev}) {
-    return (
-        <>
-        <nav aria-label="Page">
+function Pagination({ next, prev }) {
+  return (
+    <>
+      <nav aria-label="Page">
         <ul className="pagination">
           <li className="page-item">
             <button
@@ -26,7 +26,7 @@ function Pagination({next,prev}) {
         </ul>
       </nav>
     </>
-    )
+  );
 }
 
-export default Pagination
+export default Pagination;

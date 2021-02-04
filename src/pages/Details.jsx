@@ -13,8 +13,8 @@ console.log(id)
     },[])
 
     const obtenerDatos = async () =>{
-        
-        const data = await fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=ae97605229cea5a5f8ab7cc59dd73bc1`)
+        const api_key = 'ae97605229cea5a5f8ab7cc59dd73bc1'
+        const data = await fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`)
         const users = await data.json()
         setDetail(users)
         console.log(users)
@@ -23,8 +23,9 @@ console.log(id)
         <>
            <h1>{detail.title}</h1>
            <img src={`https://image.tmdb.org/t/p/w185${detail.poster_path}`}/>
+           <h2>{detail.release_date}</h2>
            <p>{detail.tagline}</p>
-           <p>{detail.overview}</p>
-        </>
+           <p>{detail.overview}</p>     
+      </>
     )
 }
