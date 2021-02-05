@@ -9,7 +9,6 @@ export default function Main({ data, next, prev, openModal}) {
   return (
     <>
       <div className="container">
-        <h1 className="title">The movies db</h1>
         <div className="row text-center">
           {data.length > 0 &&
             data.map((item) => (
@@ -29,7 +28,7 @@ export default function Main({ data, next, prev, openModal}) {
                     className="btn btn-success"
                     onClick={() => history.push(`/detail/${item.id}`)}
                   >
-                    Informacion
+                    Information
                   </button>
                 </div>
               </div>

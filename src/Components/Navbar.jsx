@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../css/Navbar.css"
 
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <a className="navbar-brand" href="#">
             The movies db
@@ -22,19 +23,19 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
-              <Link to="/estrenos" className="nav-item">
+              <Link to="/upcoming" className="nav-item">
                 <a className="nav-link" href="#">
-                  Estrenos
+                  upcoming
                 </a>
               </Link>
-              <Link to="/valorados" className="nav-item">
+              <Link to="/toprated" className="nav-item">
                 <a className="nav-link" href="#">
-                  Valorados
+                  top rated
                 </a>
               </Link>
-              <Link to="/populares" className="nav-item">
+              <Link to="/populars" className="nav-item">
                 <a className="nav-link" href="#">
-                  Populares
+                  populars
                 </a>
               </Link>
             </ul>

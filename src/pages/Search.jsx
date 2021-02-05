@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ResultCard from "../Components/ResultCard";
+import "../css/Search.css"
 
 function Search ({ searchMovies }){
   const [query, setQuery] = useState("");
@@ -13,7 +14,7 @@ function Search ({ searchMovies }){
 
   return (
     <div className="input-wrapper">
-      <input
+      <input className="input-text"
         type="text"
         placeholder="Search for a movie"
         value={query}

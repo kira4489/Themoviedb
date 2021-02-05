@@ -1,4 +1,5 @@
-import React from "react";
+
+import "../css/Pagination.css"
 
 function Pagination({ next, prev }) {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
-import {
-    useParams
-  } from "react-router-dom";
+import {useParams,withRouter} from "react-router-dom";
+import "../css/Detail.css"
 
-export default function Details() {
+function Details(props) {
+const {history} = props
 const [detail,setDetail] = React.useState({})
 let {id} = useParams();
 console.log(id)
@@ -20,13 +20,19 @@ console.log(id)
         console.log(users)
     }
     return (
-        <>
-           <h1>{detail.title}</h1>
-           <img src={`https://image.tmdb.org/t/p/w185${detail.poster_path}`}/>
-           <h2>{detail.release_date}</h2>
-           <p>{detail.tagline}</p>
-           <p>{detail.overview}</p>   
-           <p>{detail.video}</p> 
-      </>
+        <div className="container-details">
+          <div className="cards">
+           <h1 className="cards__title">{detail.title}</h1>
+           <img className="cards__img" src={`https://image.tmdb.org/t/p/w185${detail.poster_path}`}/>
+           <h2 className="cards__name">{detail.release_date}</h2>
+           <strong className="cards__strong">{detail.tagline}</strong>
+           <p className="cards__pill">{detail.overview}</p>   
+        </div>
+        <div className="button">
+        <button onClick={()=>history.goBack()}>Atras</button>
+        </div>
+      </div>
     )
 }
+
+export default withRouter(Details)

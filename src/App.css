@@ -52,40 +52,11 @@
       margin: 50px 50px 50px 50px
   }
   
-  .title{
-    margin-top: 120px;
-    margin-bottom: 80px;
-    text-align: center;
-}
-
-.btn{
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-#boton{
-    width: 100%;
-    margin-top: -2px;
-}
-
-.navbar-brand{
-  color: #0d253f;
-}
-
 #redes{
     margin-left: 10px;
 }
 
-.card{
-    width: 15rem;
-    height: 34rem;
-}
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  list-style: none;
-  margin-top: 40px;
-  border-radius: .25rem;
-}
+
+
+

@@ -1,0 +1,11 @@
+.nav-link{
+  text-transform: capitalize;
+}
+
+.navbar {
+  background-color: #2F4858;
+}
+
+.navbar-dark .navbar-nav .nav-link { 
+color: #ffff;
+}

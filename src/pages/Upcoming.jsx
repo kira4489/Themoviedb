@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 import Modal from "../Components/Modal"
 
 
-export default function Home() {
+export default function Upcoming() {
   const [page, setPage] = React.useState(1)
   const [data, setResults] = React.useState([]);
   const [dataVideo, setDataVideo] = React.useState(undefined)
@@ -21,7 +21,6 @@ const obtenerVideo = async (id) => {
     const api_key = 'ae97605229cea5a5f8ab7cc59dd73bc1'
     const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${api_key}&language=en-US`);
     const data = await response.json();
-    console.log(data)
     setDataVideo(data.results);
 }
 
@@ -34,10 +33,9 @@ const obtenerVideo = async (id) => {
 
   const obtenerDatos = async () => {
     const api_key = 'ae97605229cea5a5f8ab7cc59dd73bc1'
-    const data = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&page=${page}`);
+    const data = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&page=${page}`);
     const users = await data.json();
     setResults(users.results);
-    console.log(users.results);
   };
 
   function searchMovies(query) {

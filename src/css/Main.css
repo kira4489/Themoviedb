@@ -1,7 +1,35 @@
-.card{
-    width: 400px;
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: .25rem;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card-title{
     font-size: 20px;
+}
+
+/* #boton {
+    width: 100%;
+    margin-top: -2px;
+} */
+
+.btn{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#boton{
+    width: 100%;
+    margin-top: -2px;
 }
