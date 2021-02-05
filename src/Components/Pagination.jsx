@@ -1,5 +1,5 @@
 
-import "../css/Pagination.css"
+import "../css/Paginations.css"
 
 function Pagination({ next, prev }) {
   return (
