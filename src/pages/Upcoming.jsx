@@ -12,7 +12,6 @@ export default function Upcoming() {
   
   const openModal = (id) => {
     setIsModalOpen(true)
-    console.log(id)
     getMovie(id)
   }
   
@@ -23,7 +22,7 @@ const getMovie= async (id) => {
     setMovie(data.results);
 }
 
- const [isModalOpen, setIsModalOpen] = React.useState(false)//cambiando el estado con setismodal
+ const [isModalOpen, setIsModalOpen] = React.useState(false)
 
 
   React.useEffect(() => {
@@ -47,10 +46,8 @@ const getMovie= async (id) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         if (!data.errors) {
           setResults(data.results);
-          console.log(data.results)
         } else {
           setResults([]);
         }

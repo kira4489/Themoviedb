@@ -52,7 +52,6 @@ const getMovie = async (id) => {
         console.log(data)
         if (!data.errors) {
           setResults(data.results);
-          console.log(data.results)
         } else {
           setResults([]);
         }

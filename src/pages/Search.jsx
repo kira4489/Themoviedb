@@ -7,7 +7,6 @@ function Search ({ searchMovies }){
   const [results, setResults] = useState([]);
   
   const onChange = (e) => {
-    // e.preventDefault();//formulario
     setQuery(e.target.value);
     searchMovies(e.target.value)
   };

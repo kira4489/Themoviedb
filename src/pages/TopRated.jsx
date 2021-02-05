@@ -48,10 +48,8 @@ export default function Top_rated() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (!data.errors) {
           setResults(data.results);
-          console.log(data.results);
         } else {
           setResults([]);
         }
