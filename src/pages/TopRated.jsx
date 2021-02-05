@@ -26,10 +26,10 @@ export default function Top_rated() {
   const [isModalOpen, setIsModalOpen] = React.useState(false); //cambiando el estado con setismodal
 
   React.useEffect(() => {
-    obtenerDatos();
+    getMovies();
   }, []);
 
-  const obtenerDatos = async () => {
+  const getMovies = async () => {
     const api_key = "ae97605229cea5a5f8ab7cc59dd73bc1";
     const data = await fetch(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&page=${page}`
@@ -40,7 +40,7 @@ export default function Top_rated() {
 
   function searchMovies(query) {
     if (query === "") {
-      return obtenerDatos();
+      return getMovies();
     }
 
     fetch(
@@ -60,7 +60,7 @@ export default function Top_rated() {
 
   const next = () => {
     setPage((prevState) => prevState + 1);
-    obtenerDatos();
+    getMovies();
   };
 
   const prev = () => {
@@ -69,7 +69,7 @@ export default function Top_rated() {
     }
 
     setPage((prevState) => prevState - 1);
-    obtenerDatos();
+    getMovies();
   };
 
   return (

@@ -2,36 +2,35 @@ import React from 'react'
 import Main from "../Components/Main"
 import Navbar from '../Components/Navbar'
 import Search from './Search'
-import { useHistory } from 'react-router-dom'
 import Modal from "../Components/Modal"
 
 
 export default function Upcoming() {
   const [page, setPage] = React.useState(1)
   const [data, setResults] = React.useState([]);
-  const [dataVideo, setDataVideo] = React.useState(undefined)
+  const [dataVideo, setMovie] = React.useState(undefined)
   
   const openModal = (id) => {
     setIsModalOpen(true)
     console.log(id)
-    obtenerVideo(id)
+    getMovie(id)
   }
   
-const obtenerVideo = async (id) => {
+const getMovie= async (id) => {
     const api_key = 'ae97605229cea5a5f8ab7cc59dd73bc1'
     const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${api_key}&language=en-US`);
     const data = await response.json();
-    setDataVideo(data.results);
+    setMovie(data.results);
 }
 
  const [isModalOpen, setIsModalOpen] = React.useState(false)//cambiando el estado con setismodal
 
 
   React.useEffect(() => {
-    obtenerDatos();
+    getMovies();
   }, []);
 
-  const obtenerDatos = async () => {
+  const getMovies = async () => {
     const api_key = 'ae97605229cea5a5f8ab7cc59dd73bc1'
     const data = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&page=${page}`);
     const users = await data.json();
@@ -40,7 +39,7 @@ const obtenerVideo = async (id) => {
 
   function searchMovies(query) {
     if(query === '') {
-      return obtenerDatos()
+      return getMovies()
     }
 
     fetch(
@@ -60,7 +59,7 @@ const obtenerVideo = async (id) => {
 
   const next = () => {
     setPage(prevState => prevState + 1)
-    obtenerDatos()
+    getMovies()
   }
 
   const prev = () =>{
@@ -69,7 +68,7 @@ const obtenerVideo = async (id) => {
     }
 
     setPage(prevState => prevState - 1)
-    obtenerDatos()
+    getMovies()
   }
 
     return (

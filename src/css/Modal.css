@@ -1,0 +1,12 @@
+.video{
+    width: 640px;
+    height: 360px;
+    left: 0%;
+    top: 60px;
+    position: absolute;
+}
+
+.modal{
+    /* position: fixed;
+    left: 0; */
+}

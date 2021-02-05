@@ -3,7 +3,6 @@ import "../css/Pagination.css"
 
 function Pagination({ next, prev }) {
   return (
-    <>
       <nav aria-label="Page">
         <ul className="pagination">
           <li className="page-item">
@@ -26,7 +25,6 @@ function Pagination({ next, prev }) {
           </li>
         </ul>
       </nav>
-    </>
   );
 }
 

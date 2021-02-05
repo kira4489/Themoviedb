@@ -4,9 +4,15 @@
     margin-left: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    width: 400px;
+    width: 30%;
     height: 38px;
     border-radius: 24px;
     padding-left: 2rem;
     outline: none;
+}
+
+@media screen and (min-width: 400px) {
+    .input-text {
+        width: 300px;
+    }
 }

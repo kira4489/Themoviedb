@@ -4,7 +4,6 @@ import "../css/Navbar.css"
 
 export default function Navbar() {
   return (
-    <div>
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <a className="navbar-brand" href="#">
@@ -42,6 +41,5 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
   );
 }

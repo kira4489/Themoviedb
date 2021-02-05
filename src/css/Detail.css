@@ -1,6 +1,5 @@
 .card {
   width: 15rem;
-  height: 34rem;
 }
 
 .container-details {
@@ -50,3 +49,9 @@ button{
   display: block;
   margin: auto;
 }
+
+@media screen and (max-width: 500px) {
+  .card{
+    width: 30rem;
+  }
+  }
