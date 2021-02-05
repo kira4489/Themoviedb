@@ -7,7 +7,7 @@ function Pagination({ next, prev }) {
         <ul className="pagination">
           <li className="page-item">
             <button
-              className="page-link"
+              className="page-link page-width"
               onClick={() => prev()}
               aria-label="Previous"
             >
@@ -16,7 +16,7 @@ function Pagination({ next, prev }) {
           </li>
           <li className="page-item">
             <button
-              className="page-link"
+              className="page-link page-width"
               onClick={() => next()}
               aria-label="Next"
             >
