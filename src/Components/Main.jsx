@@ -2,7 +2,12 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import "../css/Main.css"
 import Pagination from "./Pagination";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  fas,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
 export default function Main({ data, next, prev, openModal}) {
   const history = useHistory();
 
@@ -21,6 +26,7 @@ export default function Main({ data, next, prev, openModal}) {
                   />
                   <div className="card-body">
                     <h4 className="card-title">{item.original_title}</h4>
+                    <FontAwesomeIcon id="redes" icon={faStar} />
                     <strong>{item.vote_average}</strong>
                   </div>
                   <button

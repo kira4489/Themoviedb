@@ -1,5 +1,12 @@
+:root{
+  --colorletra: #fff;
+}
+
+
+
 .card {
   width: 15rem;
+  
 }
 
 .container-details {
@@ -15,6 +22,7 @@
 .cards__title {
   text-align: center;
   margin-bottom: 50px;
+  color: var(--colorletra)
 }
 
 .cards__img {
@@ -26,18 +34,21 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: var(--colorletra)
 }
 
 .cards__strong {
   text-align: center;
   margin-top: 5px;
   margin-bottom: 20px;
+  color: var(--colorletra)
 }
 
 .cards__pill {
   margin-top: 50px;
   display: block;
   margin: auto;
+  color: var(--colorletra);
   width: 50%;
 }
 
@@ -48,6 +59,10 @@
 button{
   display: block;
   margin: auto;
+  background-color: #28a745;
+  border-color: #28a745;
+  color: var(--colorletra);
+  width: 5%;
 }
 
 @media screen and (max-width: 500px) {
