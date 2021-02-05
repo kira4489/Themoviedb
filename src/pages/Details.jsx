@@ -25,7 +25,8 @@ console.log(id)
            <img src={`https://image.tmdb.org/t/p/w185${detail.poster_path}`}/>
            <h2>{detail.release_date}</h2>
            <p>{detail.tagline}</p>
-           <p>{detail.overview}</p>     
+           <p>{detail.overview}</p>   
+           <p>{detail.video}</p> 
       </>
     )
 }
