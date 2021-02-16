@@ -9,6 +9,10 @@ export default function Top_rated() {
   const [data, setResults] = React.useState([]);
   const [dataVideo, setMovie] = React.useState(undefined);
 
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
   const openModal = (id) => {
     setIsModalOpen(true);
     getMovie(id);
@@ -73,7 +77,7 @@ export default function Top_rated() {
   return (
     <>
       <Navbar />
-      {isModalOpen && dataVideo && <Modal data={dataVideo} />}
+      {isModalOpen && dataVideo && <Modal data={dataVideo} closeModal={closeModal}/>}
       <Search searchMovies={searchMovies} />
       {data && (
         <Main data={data} prev={prev} next={next} openModal={openModal} />

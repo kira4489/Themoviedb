@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import ResultCard from "../Components/ResultCard";
 import "../css/Search.css"
 
-function Search ({ searchMovies }){
+function Search ({searchMovies}){  //destruturing
+  // const {searchMovies} = props
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
   
-  const onChange = (e) => {
-    setQuery(e.target.value);
-    searchMovies(e.target.value)
+  const onChange = (e) => { //fcuntion 
+    setQuery(e.target.value);//guardar valicacion del input
+    searchMovies(e.target.value) //se pasa por props y se pasa para guardar la validacion en el input
   };
 
   return (
@@ -17,18 +16,8 @@ function Search ({ searchMovies }){
         type="text"
         placeholder="Search for a movie"
         value={query}
-        onChange={onChange}
+        onChange={onChange} //se ejecuta cuando voy a escirbir en el input es decir en el boton buscar
       />
-
-      {results.length > 0 && (
-        <ul className="results">
-          {results.map((movie) => (
-            <li key={movie.id}>
-              <ResultCard movie={movie} />
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 };

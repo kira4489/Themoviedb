@@ -4,10 +4,9 @@ import "../css/Main.css"
 import Pagination from "./Pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  fas,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
+
 export default function Main({ data, next, prev, openModal}) {
   const history = useHistory();
 
@@ -16,12 +15,12 @@ export default function Main({ data, next, prev, openModal}) {
       <div className="container">
         <div className="row text-center">
           {data.length > 0 &&
-            data.map((item) => (
-              <div className="col-4 col-md-3 mb-5 d-flex">
+            data.map((item,index) => (
+              <div className="col-4 col-md-3 mb-5 d-flex" key={index}>
                 <div className="card">
                   <img
                     onClick={() => openModal(item.id)}
-                    class="card-img-top"
+                    className="card-img-top"
                     src={`https://image.tmdb.org/t/p/w185${item.poster_path}`}
                   />
                   <div className="card-body">

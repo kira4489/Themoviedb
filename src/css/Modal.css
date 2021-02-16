@@ -1,9 +1,11 @@
 .video{
     width: 640px;
     height: 360px;
+    min-height: 100vh;
     left: 0%;
     top: 60px;
     position: absolute;
+    z-index: 2;
 }
 
 .modal{
