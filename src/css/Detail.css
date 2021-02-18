@@ -5,9 +5,7 @@
 .card {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  min-width: 200px;
   width: 15rem;
   word-wrap: break-word;
   background-color: #fff;
@@ -84,9 +82,13 @@ button {
   .row {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .container{
-   display: flex;
-   width: 200px;
+    display: flex;
+  }
+  .card{
+    min-width: 200px;
   }
 }
