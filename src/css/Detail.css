@@ -79,15 +79,6 @@ button {
 }
 
 @media screen and (min-width: 400px) {
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .container{
-    display: flex;
-  }
   .card{
     min-width: 200px;
   }
