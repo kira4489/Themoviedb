@@ -16,7 +16,7 @@ export default function Main({ data, next, prev, openModal}) {
         <div className="row text-center">
           {data.length > 0 &&
             data.map((item,index) => (
-              <div className="col-4 col-md-3 mb-5 d-flex" key={index}>
+              <div className="col-sm-12 col-md-5 col-lg-3 mb-5 d-flex" key={index}>
                 <div className="card">
                   <img
                     onClick={() => openModal(item.id)}
