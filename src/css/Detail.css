@@ -69,17 +69,22 @@ button {
   width: 5%;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
+  /* apartir de un minimo hacia arriba */
   .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
+  .card {
+    height: 550px;
+  }
 }
 
-@media (max-width: 768px){
-  .container{
+@media (max-width: 768px) {
+  /* hasta un maximo hacia abajo */
+  .container {
     max-width: 200px;
   }
-  }
+}
