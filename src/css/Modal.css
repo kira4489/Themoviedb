@@ -1,14 +1,12 @@
-.video{
-    width: 640px;
-    height: 360px;
-    min-height: 100vh;
-    left: 0%;
-    top: 60px;
-    position: absolute;
-    z-index: 2;
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 400px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
 }
 
-.modal{
-    /* position: fixed;
-    left: 0; */
-}
