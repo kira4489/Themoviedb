@@ -59,6 +59,10 @@
   margin-top: 50px;
 }
 
+.button button{
+  width: 130px;
+}
+
 button {
   display: block;
   margin: auto;
@@ -80,3 +84,12 @@ button {
   }
 }
 
+@media screen and (max-width:500px) {
+  .cards__pill{
+    width: 100%;
+    text-align: center;
+  }
+  .button button{
+    width: 120px;
+  }
+}

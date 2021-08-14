@@ -4,8 +4,9 @@ import "../css/Navbar.css"
 
 export default function Navbar() {  /*Link es a en react*/
   return (
-      <nav className="navbar navbar-expand-lg navbar-dark">
-        <div className="container">
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-dark">
+        <div className="container w-100">
           <a className="navbar-brand" href="!#">
             The movies db
           </a>
@@ -41,5 +42,6 @@ export default function Navbar() {  /*Link es a en react*/
           </div>
         </div>
       </nav>
+     </div>
   );
 }
