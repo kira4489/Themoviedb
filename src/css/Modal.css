@@ -10,3 +10,10 @@
   z-index: 2;
 }
 
+@media screen and (max-width: 400px) {
+  .video{
+    width: 300px;
+    height: 300px;
+    top: 30px;
+  }
+}

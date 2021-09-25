@@ -5,7 +5,6 @@ import {Button} from "react-bootstrap"
 
 export default function Modal({ data, closeModal}) {
   
-  console.log(data)
   const urlYoutube = `https://www.youtube.com/watch?v=${data[0].key}` //url de youtube del props mas la key(video) de la api
     
     return (

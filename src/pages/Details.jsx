@@ -1,14 +1,12 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import {useParams,withRouter} from "react-router-dom";
 import "../css/Detail.css"
 
 function Details(props) {
 const {history} = props
-const [detail,setDetail] = React.useState({})
+const [detail,setDetail] = useState({})
 let {id} = useParams();
-console.log(id)
-    React.useEffect(() =>{
-      console.log("useeffect")
+    useEffect(() =>{
       obtenerDatos()
     },[])
 
@@ -17,13 +15,12 @@ console.log(id)
         const data = await fetch (`https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`)
         const users = await data.json()
         setDetail(users)
-        console.log(users)
     }
     return (
         <div className="container-details">
           <div className="cards">
            <h1 className="cards__title">{detail.title}</h1>
-           <img className="cards__img" src={`https://image.tmdb.org/t/p/w185${detail.poster_path}`}/>
+           <img className="cards__img" src={`https://image.tmdb.org/t/p/w185${detail.poster_path}`} alt="imagen superheroes"/>
            <h2 className="cards__name">{detail.release_date}</h2>
            <strong className="cards__strong">{detail.tagline}</strong>
            <p className="cards__pill">{detail.overview}</p>   

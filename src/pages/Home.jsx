@@ -17,7 +17,6 @@ export default function Home() {
   const openModal = (id) => {
     //parametro se puede cambiar
     setIsModalOpen(true); //cambiando el estado si es verdadero
-    console.log(id);
     getMovie(id); //ejecutando function
   };
 
@@ -44,7 +43,6 @@ export default function Home() {
     );
     const users = await data.json();
     setResults(users.results);
-    console.log(users.results);
   };
 
   function searchMovies(query) {
