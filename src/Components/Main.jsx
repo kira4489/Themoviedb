@@ -26,7 +26,7 @@ export default function Main({ data, next, prev, openModal}) {
                   <div className="card-body">
                     <h4 className="card-title">{item.original_title}</h4>
                     <FontAwesomeIcon id="redes" icon={faStar} />
-                    <strong>{item.vote_average}</strong>
+                    <strong className="card-strong">{item.vote_average}</strong>
                   </div>
                   <button
                     id="boton"
