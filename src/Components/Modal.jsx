@@ -13,6 +13,7 @@ export default function Modal({ data, closeModal}) {
           url={urlYoutube}
           className='react-player'
           playing
+          controls
           width='100%'
           height='100%'
         /> 
