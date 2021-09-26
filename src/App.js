@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import Home from "./pages/Home";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route
 } from "react-router-dom";
@@ -17,7 +17,8 @@ const history = createBrowserHistory();
 function App() {
   return (
     <>
-       <Router history={history}>
+    <BrowserRouter>
+       <Route history={history}>
         <Switch>
           <Route path="/detail/:id" component={Details} />
           <Route exact path="/" component={Home}/>
@@ -25,7 +26,8 @@ function App() {
           <Route path ="/toprated" component={Toprated}/>
           <Route path ="/upcoming" component={Upcoming}/>
           </Switch>
-      </Router>
+      </Route>
+      </BrowserRouter>
     </>
   );
 }
