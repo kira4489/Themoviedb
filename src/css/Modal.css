@@ -1,6 +1,6 @@
 .video {
   position: absolute;
-  top: 0;
+  top: 30%;
   left: 0;
   width: 640px;
   height: 400px;
@@ -14,6 +14,5 @@
   .video{
     width: 300px;
     height: 300px;
-    top: 30px;
   }
 }
