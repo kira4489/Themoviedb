@@ -10,8 +10,8 @@
     outline: none;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (max-width:500px) {
     .input-text {
-        width: 300px;
+        width: 200px;
     }
 }
