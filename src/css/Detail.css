@@ -50,9 +50,11 @@
 .cards__pill {
   margin-top: 50px;
   display: block;
+  text-align: center;
   margin: auto;
+  font-size: 1.1rem;
   color: var(--colorletra);
-  width: 50%;
+  width: 40%;
 }
 
 .button {
@@ -86,7 +88,7 @@ button {
 
 @media screen and (max-width:500px) {
   .cards__pill{
-    width: 100%;
+    width: 90%;
     text-align: center;
   }
   .button button{
