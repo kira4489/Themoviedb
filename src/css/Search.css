@@ -2,6 +2,8 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+    width: 20%;
+    height: 40%;
     margin-top: 100px;
     margin-bottom: 100px;
     height: 38px;
@@ -12,6 +14,7 @@
 
 @media screen and (max-width:500px) {
     .input-text {
-        width: 200px;
+        width: 50%;
+     /*    width: 200px; */
     }
 }
